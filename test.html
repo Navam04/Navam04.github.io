@@ -4,44 +4,36 @@
 <meta charset="utf-8">
 <title>HTML</title>
 <link rel="stylesheet" href="app.css"/>
-
 <style>
-        body {
+    body {
             background-image: url(mountainImage2.jpg);
             background-size: cover;
             color: white;
             font-family: monospace;    
-
+            text-align: center;
         }
 
         .timer {
-            font-size: 100px;
+            font-size: 50px;
             margin: auto;
             width: 50%; 
-            text-align: center;
-            position: relative;
-            top: 400px;
         }
-
+    .circle {
+	  border-radius: 50%;
+	  height: 200px;
+	  width: 200px;
+	  border: 2px solid blue;
+      align-content: center;
+	}	
 </style>
-
-
 </head>
-
 <body>
-
-    <h1 class="timer" id="start"></h1>
-    
-
-    <button class="startButton" onclick="startTimer()"> Start </button>
-    <button class="resetButton" onclick="resetTimer()"> Reset </button>
-    <button class="pauseButton" onclick="pauseTimer()"> Pause </button>
-
-    
-    
-   
+   <h2> Empty circle </h2>
+   <h1 class="timer" id="minutes"></h1>
+    <button class="restart">restart</button>
+    <button class="start" onclick="decrement1()">start</button>
+   <div class="circle">
+   </div>
 </body>
-
 <script src="app.js"></script>
-
 </html>
