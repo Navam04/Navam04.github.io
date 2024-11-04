@@ -1,2 +1,2 @@
 # personalWebsite
-This is the repo for my personal website for my resume.
+This is the repo for my personal portfolio website
