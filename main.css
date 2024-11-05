@@ -102,7 +102,11 @@
     background-color: #0A2846;
     border-radius: 6px;
     transition: transform 0.3s;
-  }
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+}
   
   .project:hover {
     transform: translateY(-5px);
@@ -118,7 +122,7 @@
     color:#F2F4F7;
   }
   
-  #skills ul li {
+  .list ul li {
     margin-bottom: 10px;
     padding: 5px 10px;
     background-color: #0A2846;
@@ -126,9 +130,13 @@
     color: #F2F4F7;
     transition: background-color 0.3s;
     transition: transform 0.3s;
-  }
+    -webkit-transition: transform 0.3s;
+    -moz-transition: transform 0.3s;
+    -ms-transition: transform 0.3s;
+    -o-transition: transform 0.3s;
+}
   
-  #skills ul li:hover {
+  .list ul li:hover {
     transform: translateY(-5px);
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
   }
@@ -172,12 +180,12 @@ h2::after {
     background: #5A7692;
 }
 
-.project, #skills ul li {
+.project, .list ul li {
     background-color: #B8C9D9;  /* Muted blue-grey for project and skills items */
     color: #3A4A58;
 }
 
-#skills ul li:hover {
+.list ul li:hover {
      /* Softened U of T gold */
     color: #3A4A58;
 }
