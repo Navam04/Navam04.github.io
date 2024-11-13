@@ -1,73 +1,82 @@
-// set the base starting value of 25 minutes
+// Typewriter effect for rotating text
+const phrases = [
+    "Navam Goyani",
+    "Computer Science @ U of T",
+    "Game Developer @ MZN-X Studios"
+  ];
+  let phraseIndex = 0;
+  let charIndex = 0;
+  const typeSpeed = 100;
+  const deleteSpeed = 50;
+  const delayBetweenPhrases = 2000;
+  const typewriterElement = document.getElementById("typewriter-text");
+  
+  function type() {
+    const currentPhrase = phrases[phraseIndex];
+    if (charIndex < currentPhrase.length) {
+      typewriterElement.innerHTML += currentPhrase.charAt(charIndex);
+      charIndex++;
+      setTimeout(type, typeSpeed);
+    } else {
+      setTimeout(erase, delayBetweenPhrases);
+    }
+  }
+  
+  function erase() {
+    if (charIndex > 0) {
+        typewriterElement.innerHTML = phrases[phraseIndex].substring(0, charIndex - 1);
+        charIndex--;
+        setTimeout(erase, deleteSpeed);
+    } else {
+        typewriterElement.innerHTML = "&nbsp;"; // Keeps space while waiting
+        phraseIndex = (phraseIndex + 1) % phrases.length;
+        setTimeout(type, typeSpeed);
+    }
+}
+  
+  // Start the typewriter effect
+  document.addEventListener("DOMContentLoaded", () => {
+    setTimeout(type, delayBetweenPhrases);
+  });
 
-var start = "25:00";
-document.getElementById("start").innerHTML = start;
+  document.addEventListener("DOMContentLoaded", function() {
+    const links = document.querySelectorAll("a[href^='#']");
 
-var minutes = 25;
-var seconds = 0;
+    // Function to perform smooth scroll
+    function smoothScroll(target, duration) {
+        const targetPosition = target.getBoundingClientRect().top + window.scrollY - 50;
+        const startPosition = window.scrollY;
+        const distance = targetPosition - startPosition;
+        let startTime = null;
 
-//store if the timer has started 
-var timerStarted = false;
-
-//stores if the timer is paused or not as to not cause overlapping starting of the timer
-var timerPaused = false;
-
-function startTimer() {
-
-    if (!timerPaused) {
-        if (!timerStarted) {
-            timerStarted = true;
-            var timerInterval = setInterval(reduceSecond, 1000);
-            timerInterval.start();
+        function animation(currentTime) {
+            if (startTime === null) startTime = currentTime;
+            const timeElapsed = currentTime - startTime;
+            const run = ease(timeElapsed, startPosition, distance, duration);
+            window.scrollTo(0, run);
+            if (timeElapsed < duration) requestAnimationFrame(animation);
         }
-    } else {
-        timerStarted = true;
-        timerPaused = false;
-    }
-}
 
+        // Ease function for smooth scrolling effect
+        function ease(t, b, c, d) {
+            t /= d / 2;
+            if (t < 1) return (c / 2) * t * t + b;
+            t--;
+            return (-c / 2) * (t * (t - 2) - 1) + b;
+        }
 
-
-function reduceSecond() {
-
-    if (timerStarted) {
-
-    if (seconds == 0 && minutes == 0) {
-        clearInterval(timerInterval);
+        requestAnimationFrame(animation);
     }
 
-    if (seconds == 0) {
-        seconds = 59;
-        minutes -= 1;
-    } else {
-        seconds -= 1;
-    }
-
-    }
-
-    if (seconds <= 9) {
-        start = minutes + ":0" + seconds;
-    } else if (seconds <= 9 && minutes <= 9) {
-        start = "0" + minutes + ":0" + seconds;
-    } else {
-        start = minutes + ":" + seconds;
-    }
-
-    document.getElementById("start").innerHTML = start;
-}
-
-function pauseTimer() {
-    
-    timerPaused = true;
-    timerStarted = false;
-
-}
-
-function resetTimer() {
-    pauseTimer();
-    minutes = 25;
-    seconds = 0;
-    start = "25:00";
-    document.getElementById("start") = start;
-
-}
+    // Attach click event to all anchor links for smooth scrolling
+    links.forEach(link => {
+        link.addEventListener("click", function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute("href").substring(1);
+            const targetElement = document.getElementById(targetId);
+            if (targetElement) {
+                smoothScroll(targetElement, 1500);  // Set duration in milliseconds (e.g., 1500ms = 1.5 seconds)
+            }
+        });
+    });
+});

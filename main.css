@@ -1,215 +1,152 @@
 /* Basic Reset */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: 'Source Code Pro', monospace;
-    color: #F2F4F7;
-    background-color: #25355A;
-    line-height: 1.6;
-  }
-  
-  header {
-    text-align: center;
-    padding: 40px 20px;
-    background-color: #0A2846;
-    color: #F2F4F7;
-    animation: fadeInDown 1s ease-in-out;
-  }
-  
-  header h1 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-  }
-  
-  header p {
-    font-size: 1.2rem;
-  }
-  
-  header nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-  }
-  
-  header nav a {
-    color: #A6CEE3;
-    text-decoration: none;
-    font-weight: bold;
-    position: relative;
-    transition: color 0.3s;
-  }
-  
-  header nav a::after {
-    content: '';
-    position: absolute;
-    width: 0%;
-    height: 2px;
-    background: #A6CEE3;
-    left: 0;
-    bottom: -5px;
-    transition: width 0.3s ease;
-  }
-  
-  header nav a:hover {
-    color: #F2F4F7;
-  }
-  
-  header nav a:hover::after {
-    width: 100%;
-  }
-  
-  /* Section Styles */
-  section {
-    padding: 10px 20px;
-    max-width: 800px;
-    margin: auto;
-    background-color: #0A2846;
-    margin-bottom: 30px;
-    border-radius: 8px;
-    border-left: 6px solid #F2F4F7;
-
-    animation: fadeInUp 1.2s ease;
-  }
-
-  #about {
-    margin-top:30px
-  }
-  
-  h2 {
-    margin-bottom: 20px;
-    color: #A6CEE3;
-    position: relative;
-  }
-  
-  h2::after {
-    content: '';
-    position: absolute;
-    width: 50px;
-    height: 3px;
-    background: #A6CEE3;
-    left: 0;
-    bottom: -8px;
-  }
-  
-  .project {
-    margin-bottom: 20px;
-    padding: 15px;
-    background-color: #0A2846;
-    border-radius: 6px;
-    transition: transform 0.3s;
-    -webkit-border-radius: 6px;
-    -moz-border-radius: 6px;
-    -ms-border-radius: 6px;
-    -o-border-radius: 6px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-  
-  .project:hover {
-    transform: translateY(-5px);
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
-  }
-  
-  ul {
-    list-style: none;
-    padding: 0;
-  }
 
-  a {
-    color:#F2F4F7;
-  }
-  
-  .list ul li {
-    margin-bottom: 10px;
-    padding: 5px 10px;
-    background-color: #0A2846;
-    border-radius: 4px;
-    color: #F2F4F7;
-    transition: background-color 0.3s;
-    transition: transform 0.3s;
-    -webkit-transition: transform 0.3s;
-    -moz-transition: transform 0.3s;
-    -ms-transition: transform 0.3s;
-    -o-transition: transform 0.3s;
-}
-  
-  .list ul li:hover {
-    transform: translateY(-5px);
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
-  }
-  
-  #contact ul li {
-    margin: 5px 0;
-  }
-  
-/*=====================================================*/
-  
+/* Body Styles */
 body {
-    background-color: #F0F4F8;  /* Light pastel blue for background */
-    color: #3A4A58;  /* Muted dark grey-blue for main text */
+  background: linear-gradient(to bottom, #a0d6ff, #cce7ff 15%, #e0f7ff 20%, #F5FAFF 30%);
+  color: #3A4A58;
+  font-family: 'Source Code Pro', monospace;
+  line-height: 1.8;
+  padding: 20px;
+  margin: 0;
 }
 
-header {
-    background-color: #5A7692;  /* Softened U of T blue */
-    color: #FFFFFF;
+/* Header with Typewriter Effect */
+.centered-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  text-align: center;
+  color: #0A2846;
+}
+
+.typewriter {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+  animation: fadeInDown 1s ease-in-out;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Navigation */
+header nav ul {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  margin-top: 10px;
 }
 
 header nav a {
-    color: #B8C9D9;  /* Light pastel blue-grey for links */
+  color: #5A7692;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
 }
 
 header nav a:hover {
-    color: #F0F4F8;
+  color: #3A4A58;
 }
 
+/* Sections */
 section {
-    background-color: #D3E2EC;  /* Very light, pastel blue */
-    border-left: 6px solid #3A4A58;
-    border-right: 6px solid #3A4A58;
-    color: #3A4A58;
+  padding: 40px;
+  max-width: 1000px;
+  margin: 60px auto;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
 }
 
+/* Section Headers */
 h2 {
-    color: #5A7692;  /* U of T blue tone */
+  font-size: 2rem;
+  color: #5A7692;
+  margin-bottom: 20px;
+  text-align: center;
+  position: relative;
 }
 
 h2::after {
-    background: #5A7692;
+  content: '';
+  position: absolute;
+  width: 50px;
+  height: 3px;
+  background: #5A7692;
+  left: 0;
+  bottom: -8px;
 }
 
-.project, .list ul li {
-    background-color: #B8C9D9;  /* Muted blue-grey for project and skills items */
-    color: #3A4A58;
+/* Project and Skill Cards */
+.section-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
 }
 
-.list ul li:hover {
-     /* Softened U of T gold */
-    color: #3A4A58;
+.card {
+  flex: 1 1 45%;
+  min-width: 280px;
+  padding: 20px;
+  background-color: #F5FAFF;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card h3 {
+  font-size: 1.4rem;
+  color: #3A4A58;
+  margin-bottom: 10px;
+}
+
+.card p {
+  color: #4D5B6A;
+  line-height: 1.6;
+}
+
+/* Contact Links */
+#contact ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
 }
 
 #contact ul li a {
-    color: #5A7692;  /* Using U of T blue for contact links */
+  font-size: 1.1rem;
+  color: #5A7692;
+  text-decoration: none;
+  transition: color 0.3s;
 }
 
 #contact ul li a:hover {
-    color: #3A4A58  /* Muted gold on hover */
+  color: #3A4A58;
 }
 
+/* Animations */
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
 
-
-/*=====================================================*/
-
-  /* Animations */
-  @keyframes fadeInUp {
-    0% { opacity: 0; transform: translateY(20px); }
-    100% { opacity: 1; transform: translateY(0); }
-  }
-  
-  @keyframes fadeInDown {
-    0% { opacity: 0; transform: translateY(-20px); }
-    100% { opacity: 1; transform: translateY(0); }
-  }
-  
+@keyframes fadeInDown {
+  0% { opacity: 0; transform: translateY(-20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
