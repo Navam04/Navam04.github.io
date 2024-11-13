@@ -80,3 +80,23 @@ const phrases = [
         });
     });
 });
+
+// Show the "Back to Top" button after scrolling down a certain amount
+window.addEventListener("scroll", function() {
+    const backToTopButton = document.getElementById("backToTop");
+    if (window.scrollY > 300) {  // Adjust 300 to the point where you want it to appear
+        backToTopButton.style.opacity = "1";
+        backToTopButton.style.visibility = "visible";
+    } else {
+        backToTopButton.style.opacity = "0";
+        backToTopButton.style.visibility = "hidden";
+    }
+});
+
+// Scroll smoothly to the top when the button is clicked
+document.getElementById("backToTop").addEventListener("click", function() {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+});

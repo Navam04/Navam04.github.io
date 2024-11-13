@@ -140,6 +140,79 @@ h2::after {
   color: #3A4A58;
 }
 
+/* Contact Form Styling */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 500px;
+  margin: 20px auto;
+}
+
+.contact-form label {
+  font-size: 1rem;
+  color: #5A7692;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 10px;
+  border: 1px solid #B8C9D9;
+  border-radius: 5px;
+  font-size: 1rem;
+  color: #3A4A58;
+  background-color: #F5FAFF;
+  resize: none;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #5A7692;
+  box-shadow: 0 0 5px rgba(90, 118, 146, 0.3);
+}
+
+.contact-form button {
+  padding: 10px 15px;
+  font-size: 1rem;
+  color: #ffffff;
+  background-color: #5A7692;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+  background-color: #3A4A58;
+}
+
+/* Back to Top Button */
+#backToTop {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  padding: 12px 15px;
+  font-size: 1.5rem;
+  color: #ffffff;
+  background-color: #5A7692;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 1000;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+#backToTop:hover {
+  background-color: #3A4A58;
+}
+
 /* Animations */
 @keyframes fadeInUp {
   0% { opacity: 0; transform: translateY(20px); }

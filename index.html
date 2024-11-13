@@ -62,17 +62,38 @@
 <section id="courses">
   <h2>Course Work</h2>
   <div class="section-content">
-      <div class="card">CSC209 - Unix Systems</div>
+      <div class="card">CSC207 - Software Design</div>
+      <div class="card">CSC209 - Systems Programming</div>
       <div class="card">CSC258 - Computer Organization</div>
-      <div class="card">CSC376 - Robotics</div>
+      <div class="card">CSC376 - Fundamentals of Robotics</div>
       <div class="card">CSC347 - Information Security</div>
-      <!-- Add more skills as needed -->
+      <div class="card">CSC301 - Software Engineering</div>
+      <div class="card">CSC311 - Machine Learning</div>
+      <div class="card">CSC343 - Databases</div>
   </div>
 </section>
 
 <!-- Contact Section -->
 <section id="contact">
   <h2>Contact</h2>
+  <p>If you'd like to get in touch, feel free to fill out the form below or reach out through the provided links.</p>
+    
+    <form action="#" method="post" class="contact-form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="inquiry">Inquiry Reason:</label>
+        <textarea id="inquiry" name="inquiry" rows="4" ></textarea>
+
+        <button type="submit">Submit</button>
+    </form>
+
   <ul>
       <li><a href="mailto:navamvg@gmail.com">Email: navamvg@gmail.com</a></li>
       <li><a href="https://linkedin.com/in/navamgoyani">LinkedIn</a></li>
@@ -80,6 +101,9 @@
   </ul>
 </section>
 </div>
+
+<!-- Back to Top Button -->  
+<button id="backToTop" title="Back to Top">⇧</button>
 
 <!-- Footer Section -->
 <script src="main.js"></script>
