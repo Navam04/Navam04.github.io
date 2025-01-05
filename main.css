@@ -27,7 +27,7 @@ body {
 }
 
 .typewriter {
-  font-size: clamp(0.5rem, 3vw, 2rem);
+  font-size: clamp(0.5rem, 5vw, 2rem);
   font-weight: bold;
   margin-bottom: 15px;
   animation: fadeInDown 1s ease-in-out;
@@ -40,10 +40,10 @@ body {
 /* Navigation */
 header nav ul {
   display: flex;
-  gap: clamp(36px, 3vw, 40px);
+  gap: clamp(20px, 2vw, 40px);
   justify-content: center;
   margin-top: 10px;
-  font-size: clamp(16px, 2vw, 20px);
+  font-size: clamp(8px, 2vw, 16px);
 }
 
 header nav a {
