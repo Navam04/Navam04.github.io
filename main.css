@@ -56,6 +56,23 @@ header nav a:hover {
   color: #3A4A58;
 }
 
+@media screen and (max-width: 768px) {
+
+  header nav ul {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 10px;
+    font-size: 8px;
+  }
+
+  .typewriter {
+    font-size: 1.5rem;
+  }
+
+}
+
+
 /* Sections */
 section {
   padding: 40px;
