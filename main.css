@@ -27,7 +27,7 @@ body {
 }
 
 .typewriter {
-  font-size: 2rem;
+  font-size: clamp(0.5rem, 5vw, 2rem);
   font-weight: bold;
   margin-bottom: 15px;
   animation: fadeInDown 1s ease-in-out;
@@ -40,9 +40,10 @@ body {
 /* Navigation */
 header nav ul {
   display: flex;
-  gap: 40px;
+  gap: clamp(20px, 2vw, 40px);
   justify-content: center;
   margin-top: 10px;
+  font-size: clamp(8px, 2vw, 16px);
 }
 
 header nav a {
@@ -56,21 +57,7 @@ header nav a:hover {
   color: #3A4A58;
 }
 
-@media screen and (max-width: 768px) {
 
-  header nav ul {
-    display: flex;
-    gap: 15px;
-    justify-content: center;
-    margin-top: 10px;
-    font-size: 8px;
-  }
-
-  .typewriter {
-    font-size: 1.5rem;
-  }
-
-}
 
 
 /* Sections */
