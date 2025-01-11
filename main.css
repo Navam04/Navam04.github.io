@@ -57,10 +57,64 @@ header nav a:hover {
   color: #3A4A58;
 }
 
-
-
-
 /* Sections */
+
+.fade-in-left {
+  opacity: 0;
+  transform: translateX(-100px);
+  transition: all 1s ease-out;
+  -webkit-transform: translateX(-100px);
+  -moz-transform: translateX(-100px);
+  -ms-transform: translateX(-100px);
+  -o-transform: translateX(-100px);
+}
+
+/* This class is added by JavaScript when the element intersects the viewport */
+.fade-in-left.visible {
+  opacity: 1;
+  transform: translateX(0);
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  -o-transform: translateX(0);
+}
+
+.fade-in-right {
+  opacity: 0;
+  transform: translateX(100px);
+  transition: all 0.8s ease-out;
+  -webkit-transform: translateX(100px);
+  -moz-transform: translateX(100px);
+  -ms-transform: translateX(100px);
+  -o-transform: translateX(100px);
+}
+
+/* This class is added by JavaScript when the element intersects the viewport */
+.fade-in-right.visible {
+  opacity: 1;
+  transform: translateX(0);
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  -o-transform: translateX(0);
+}
+
+.fade-in-bottom {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+}
+
+/* This class is added by JavaScript when the element intersects the viewport */
+.fade-in-bottom.visible {
+  opacity: 1;
+  transform: translateX(0);
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  -o-transform: translateX(0);
+}
+
 section {
   padding: 40px;
   max-width: 1000px;

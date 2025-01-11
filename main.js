@@ -10,7 +10,7 @@ const phrases = [
   const deleteSpeed = 50;
   const delayBetweenPhrases = 2000;
   const typewriterElement = document.getElementById("typewriter-text");
-  
+
   function type() {
     const currentPhrase = phrases[phraseIndex];
     if (charIndex < currentPhrase.length) {
@@ -21,7 +21,7 @@ const phrases = [
       setTimeout(erase, delayBetweenPhrases);
     }
   }
-  
+
   function erase() {
     if (charIndex > 0) {
         typewriterElement.innerHTML = phrases[phraseIndex].substring(0, charIndex - 1);
@@ -33,7 +33,7 @@ const phrases = [
         setTimeout(type, typeSpeed);
     }
 }
-  
+
   // Start the typewriter effect
   document.addEventListener("DOMContentLoaded", () => {
     setTimeout(type, delayBetweenPhrases);
@@ -100,3 +100,152 @@ document.getElementById("backToTop").addEventListener("click", function() {
         behavior: "smooth"
     });
 });
+
+
+// FADE IN ANIMATIONS LEFT RIGHT BOTTOM
+
+//LEFT
+document.addEventListener("DOMContentLoaded", () => {
+    // Select all elements with .fade-in-left
+    const fadeInElements = document.querySelectorAll(".fade-in-left");
+    
+    // Set up the Intersection Observer
+    const observer = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach((entry) => {
+          // Check if the element is in view
+          if (entry.isIntersecting) {
+            // Add .visible to start the animation
+            entry.target.classList.add("visible");
+            // Optionally stop observing this element after it becomes visible
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      {
+        threshold: 0.1 // Adjust as needed; 0.1 means element is 10% in view
+      }
+    );
+
+    // Observe each element
+    fadeInElements.forEach((el) => observer.observe(el));
+  });
+
+//   document.addEventListener("DOMContentLoaded", () => {
+//     // IntersectionObserver setup
+//     const observer = new IntersectionObserver((entries) => {
+//       entries.forEach((entry) => {
+//         if (entry.isIntersecting) {
+//           entry.target.classList.add("visible");
+//         } else {
+//           // Remove .visible to fade out again if scrolling out of viewport
+//           entry.target.classList.remove("visible");
+//         }
+//       });
+//     });
+  
+//     // Select all elements to observe
+//     const fadeInElements = document.querySelectorAll(".fade-in-left");
+  
+//     // Observe each element
+//     fadeInElements.forEach((el) => observer.observe(el));
+//   });
+  
+
+//RIGHT
+
+  document.addEventListener("DOMContentLoaded", () => {
+    // Select all elements with .fade-in-left
+    const fadeInElements = document.querySelectorAll(".fade-in-right");
+    
+    // Set up the Intersection Observer
+    const observer = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach((entry) => {
+          // Check if the element is in view
+          if (entry.isIntersecting) {
+            // Add .visible to start the animation
+            entry.target.classList.add("visible");
+            // Optionally stop observing this element after it becomes visible
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      {
+        threshold: 0.1 // Adjust as needed; 0.1 means element is 10% in view
+      }
+    );
+
+    // Observe each element
+    fadeInElements.forEach((el) => observer.observe(el));
+  });
+
+//   document.addEventListener("DOMContentLoaded", () => {
+//     // IntersectionObserver setup
+//     const observer = new IntersectionObserver((entries) => {
+//       entries.forEach((entry) => {
+//         if (entry.isIntersecting) {
+//           entry.target.classList.add("visible");
+//         } else {
+//           // Remove .visible to fade out again if scrolling out of viewport
+//           entry.target.classList.remove("visible");
+//         }
+//       });
+//     });
+  
+//     // Select all elements to observe
+//     const fadeInElements = document.querySelectorAll(".fade-in-right");
+  
+//     // Observe each element
+//     fadeInElements.forEach((el) => observer.observe(el));
+//   });
+  
+
+
+  //BOTTOM
+  document.addEventListener("DOMContentLoaded", () => {
+    // Select all elements with .fade-in-left
+    const fadeInElements = document.querySelectorAll(".fade-in-bottom");
+    
+    // Set up the Intersection Observer
+    const observer = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach((entry) => {
+          // Check if the element is in view
+          if (entry.isIntersecting) {
+            // Add .visible to start the animation
+            entry.target.classList.add("visible");
+            // Optionally stop observing this element after it becomes visible
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      {
+        threshold: 0.1 // Adjust as needed; 0.1 means element is 10% in view
+      }
+    );
+
+    // Observe each element
+    fadeInElements.forEach((el) => observer.observe(el));
+  });
+
+//   document.addEventListener("DOMContentLoaded", () => {
+//     // IntersectionObserver setup
+//     const observer = new IntersectionObserver((entries) => {
+//       entries.forEach((entry) => {
+//         if (entry.isIntersecting) {
+//           entry.target.classList.add("visible");
+//         } else {
+//           // Remove .visible to fade out again if scrolling out of viewport
+//           entry.target.classList.remove("visible");
+//         }
+//       });
+//     });
+  
+//     // Select all elements to observe
+//     const fadeInElements = document.querySelectorAll(".fade-in-bottom");
+  
+//     // Observe each element
+//     fadeInElements.forEach((el) => observer.observe(el));
+//   });
+  
