@@ -130,7 +130,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Observe each element
     fadeInElements.forEach((el) => observer.observe(el));
   });
-
+//test comment
 //   document.addEventListener("DOMContentLoaded", () => {
 //     // IntersectionObserver setup
 //     const observer = new IntersectionObserver((entries) => {
