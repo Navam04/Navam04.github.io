@@ -1,0 +1,68 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+body {
+    background: linear-gradient(to bottom, #a0d6ff, #cce7ff 15%, #e0f7ff 20%, #F5FAFF 30%);
+    color: #3A4A58;
+    font-family: 'Source Code Pro', monospace;
+    line-height: 1.8;
+    padding: 20px;
+    margin: 0;
+  }
+
+section {
+    padding: 40px;
+    max-width: 1000px;
+    margin: 60px auto;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+  }
+
+#Header h1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center;
+    color: #0A2846;
+}
+
+#About h2::after {
+    content: '';
+    position: absolute;
+    width: 68px;
+    height: 3px;
+    background: #5A7692;
+    left: 20px;
+    bottom: -70px;
+  }
+
+#About p {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    line-height: 1.8;
+  }
+
+#RetLink a {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #0A2846;
+}
+
+#RetLink {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+

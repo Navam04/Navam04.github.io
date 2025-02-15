@@ -51,12 +51,20 @@ header nav a {
   text-decoration: none;
   font-weight: bold;
   transition: color 0.3s;
+  -webkit-transition: color 0.3s;
+  -moz-transition: color 0.3s;
+  -ms-transition: color 0.3s;
+  -o-transition: color 0.3s;
 }
 
 header nav a:hover {
   color: #3A4A58;
 }
 
+
+.card a{
+  text-decoration: none;
+}
 /* Sections */
 
 .fade-in-left {
